@@ -1,0 +1,15 @@
+{
+  "educationInfos": [
+    {
+	  "courseName": "BTech",
+	  "courseStartDate": "11/01/2016",
+	  "instituteName": "IIT Delhi"
+	}
+  ],
+  "email": "ersanjaysingh8@gmail.com",
+  "firstName": "Sanjay",
+  "lastName": "Singh",
+  "role": "Student",
+  "password":"pass@123",
+  "confirmPassword":"pass@123"
+}

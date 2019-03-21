@@ -1,0 +1,4 @@
+com/javasampleapproach/neo4j/repository/StudentRepository.class
+com/javasampleapproach/neo4j/controller/WebController.class
+com/javasampleapproach/neo4j/model/Student.class
+com/javasampleapproach/neo4j/SpringNeo4jApplication.class

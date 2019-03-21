@@ -1,0 +1,9 @@
+# Spring properties
+spring:
+  application:
+     name: ogmissue-service
+# HTTP Server
+server:
+  port: 2222   # HTTP (Tomcat) port
+
+

@@ -1,0 +1,41 @@
+version: '3'
+services:
+  
+  stufusionauthserver:
+    build: .
+    image: stufusion/stufusion-oauth-server
+    container_name: stufusionauthserver
+    depends_on:
+    - stufusionmysql
+   
+    networks:
+    - infra
+    ports:
+    - 9999:9999
+    environment:
+    - spring.profiles.active=prod
+    - EXPOSE_PORT=9999
+    - CONTEXT=auth-server
+    - DB_HOST=stufusionmysql
+    - DB_PORT=3306
+    - DB_SECRET=password    
+  
+    
+  stufusionmysql:
+     image: library/mysql:latest
+     container_name: stufusionmysql
+     networks:
+     - infra
+     ports:
+     - "3306:3306"
+     environment:
+     - MYSQL_ROOT_PASSWORD=secret
+     - MYSQL_DATABASE=authserver
+     - MYSQL_USER=test
+     - MYSQL_PASSWORD=password  
+     
+ 
+   
+networks:
+  infra:  
+       

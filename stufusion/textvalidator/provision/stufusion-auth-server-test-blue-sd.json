@@ -1,0 +1,5 @@
+{
+    "cluster": "%CLUSTER%", 
+    "serviceName": "%SERVICENAME%", 
+    "taskDefinition": "%TDDEF%"
+}

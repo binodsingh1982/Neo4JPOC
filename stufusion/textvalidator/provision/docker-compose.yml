@@ -1,0 +1,37 @@
+  version: '3'
+
+  services:
+  
+    stufusionnotificationserver:
+     build: .
+     image: stufusion/stufusion-notification-server
+     container_name: stufusionnotificationserver
+     depends_on:
+       - stufusionneo4j
+     networks:
+      - infra
+     ports:
+      - 7070:7070
+     environment:
+      - spring.profiles.active=prod
+      - EXPOSE_PORT=7070
+      - CONTEXT=notification-server
+      - DB_HOST= stufusionneo4j
+      - DB_PORT=7474
+      - DB_SECRET=root  
+    stufusionneo4j:
+     image: neo4j:3.2.0 # pull the latest image
+     networks:
+      - infra
+     environment:
+      - NEO4J_AUTH=neo4j/root # configure the instance with custom username/password
+      - NEO4J_HEAP_MEMORY=2048 # configure the heap memory
+      - NEO4J_CACHE_MEMORY=1G # configure the cache memory
+     volumes:
+      - ./db/dbms:/data/dbms # provision the volumes
+     ports: 
+      - "7474" # expose the port for the console ui
+      
+  networks:
+    infra:  
+       

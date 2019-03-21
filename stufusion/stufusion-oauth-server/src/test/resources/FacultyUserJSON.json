@@ -1,0 +1,17 @@
+{
+  "facultyRelInfos": [
+	{
+		"facultyInfo": 
+		{
+		  "instituteName": "IIT Kanpur",
+		  "title": "IT"
+		}
+	}
+  ],
+  "email": "ersanjaysingh8@gmail.com",
+  "firstName": "Sanjay",
+  "lastName": "Singh",
+  "role": "Faculty",
+  "password":"pass@123",
+  "confirmPassword":"pass@123"
+}
